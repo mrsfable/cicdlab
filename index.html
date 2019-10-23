@@ -5,6 +5,9 @@
     <title>APPLEPEN</title>
   <link rel="stylesheet" type="text/css" href="styling.css">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="/sendEmails.js"></script>
+
   </head>
   <body>
     <h1>Apple Fruit is awesome<h1>
@@ -22,9 +25,10 @@
 <body>
 
 <div class="container">  
-  <form id="contact" action="" method="post">
+  <div id="contact">
+    <form id = "contact-form">
     <h3>Quick Contact</h3>
-    <h4>Contact us today, and we reply tomorrow (maybe)! But to Aygün we reply today <3</h4>
+    <h4>Contact us today and we reply tomorrow (maybe)! But to Aygün we reply today <3</h4>
     <fieldset>
       <input id="name" placeholder="Your name" type="text" tabindex="1" required autofocus>
     </fieldset>
@@ -38,9 +42,10 @@
       <textarea id="message" placeholder="Type your Message Here...." tabindex="5" required></textarea>
     </fieldset>
     <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      <button type="submit" name="submit" id="contact-submit" data-submit="...Sending">Submit</button>
     </fieldset>
-  </form>
+  </div>
+</form>
 
 
 <link href='https://fonts.googleapis.com/css?family=Exo:400,900' rel='stylesheet' type='text/css'>

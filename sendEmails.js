@@ -1,20 +1,19 @@
-import Axios from "axios"
-
 function sendEmail(){
-    var data = [
+    var data =
         { 
         "name" : document.getElementById("name").value,
         "mail": document.getElementById("mail").value,
         "phone-number": document.getElementById("phone-number").value,
         "message": document.getElementById("message").value
-        }
-    ];
-
+        };
+    console.log(data);
     //TODO: Post request to axios to trigger sending the data
     return data;
 }
 
-var submit = document.getElementById('contact-submit');
-submit.onclick = function(){
+$(document).ready(function() {
+    document.getElementById("contact-form").addEventListener("submit", function(e){
+    e.preventDefault();
     sendEmail();
-}
+   });
+});
