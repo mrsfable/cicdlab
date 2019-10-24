@@ -9,6 +9,7 @@ pipeline {
     stage('Test') {
       steps {
         sh 'echo "test"'
+        build 'mycicdlab'
       }
     }
     stage('Deploy') {
