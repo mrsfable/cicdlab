@@ -15,8 +15,8 @@ pipeline {
         }
         stage('Test 2') {
           agent {
-            docker {
-              image 'ec2-user_nginx-dev:latest'
+            dockerfile {
+              filename 'Dockerfile.dev'
             }
 
           }
