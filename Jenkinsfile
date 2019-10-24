@@ -7,20 +7,8 @@ pipeline {
       }
     }
     stage('Test') {
-      parallel {
-        stage('Test') {
-          steps {
-            sh 'curl -H \'loaderio-auth: 9b7cedac3d569b020fefe4f94227490f\' https://api.loader.io/v2/tests/49b5c151dc02373dd4cf6e4a147ba991/run'
-          }
-        }
-        stage('error') {
-          environment {
-            Ci = 'true'
-          }
-          steps {
-            sh './jenkins/scripts/test.sh '
-          }
-        }
+      steps {
+        sh 'curl -H \'loaderio-auth: 9b7cedac3d569b020fefe4f94227490f\' https://api.loader.io/v2/tests/49b5c151dc02373dd4cf6e4a147ba991/run'
       }
     }
     stage('Deploy') {
