@@ -8,6 +8,16 @@ function sendEmail(){
         };
     console.log(data);
     //TODO: Post request to axios to trigger sending the data
+    
+   axios.post('http://localhost:5000/contact', data)
+  .then(function (response) {
+      console.log("SUCCESS")
+  })
+  .catch(function (error) {
+  });
+  
+
+    
     return data;
 }
 
