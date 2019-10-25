@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'ssh -i "/DevOps.pem" -o StrictHostKeyChecking=no ec2-user@ec2-52-58-102-201.eu-central-1.compute.amazonaws.com "/home/ec2-user/build.sh nginx-dev ${env.BUILD_NUMBER}; /home/ec2-user/start.sh nginx-dev"'
+        sh 'ssh -i "/DevOps.pem" -o StrictHostKeyChecking=no ec2-user@ec2-52-58-102-201.eu-central-1.compute.amazonaws.com "/home/ec2-user/build.sh nginx-dev; /home/ec2-user/start.sh nginx-dev"'
+        echo '${env.BUILD_NUMBER}'
       }
     }
     stage('Test') {
