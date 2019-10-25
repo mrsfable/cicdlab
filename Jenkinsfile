@@ -8,10 +8,8 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'chmod 755 /home/ec2-user/runTest.sh'
-        sh '/home/ec2-user/runTest.sh'
-        sh 'chmod 755 /home/ec2-user/readResult.sh'
-        sh '/home/ec2-user/readResult.sh'
+        sh '/home/ec2-user/runTest.sh nginx-dev'
+        sh '/home/ec2-user/readResult.sh nginx-dev'
         sh 'echo "test"'
       }
     }
