@@ -11,9 +11,11 @@ function sendEmail(){
     
    axios.post('http://localhost:5000/contact', data)
   .then(function (response) {
-      console.log("SUCCESS")
+      console.log("SUCCESS");
+      alert("Mail sent!");
   })
   .catch(function (error) {
+      alert("Error, mail not sent!");
   });
   
 
