@@ -19,7 +19,8 @@ pipeline {
           script{
             error "Failed, exiting now..."
           }
-        }   
+        } 
+      }  
     }
       
     stage('Deploy') {
