@@ -12,11 +12,11 @@ pipeline {
         sh 'ssh -i "/DevOps.pem" -o StrictHostKeyChecking=no ec2-user@ec2-52-58-102-201.eu-central-1.compute.amazonaws.com "/home/ec2-user/script/runTest.sh nginx-dev; /home/ec2-user/script/readResult.sh nginx-dev"'
         sh 'ssh -i "/DevOps.pem" -o StrictHostKeyChecking=no ec2-user@ec2-52-58-102-201.eu-central-1.compute.amazonaws.com "home/ec2-user/script/compareResult.sh nginx-dev'
       } 
-      post{
-        success{
+      post {
+        success {
         }
-        failure{
-          script{
+        failure {
+          script {
             error "Failed, exiting now..."
           }
         } 
