@@ -9,7 +9,7 @@ function sendEmail(){
     console.log(data);
     //TODO: Post request to axios to trigger sending the data
     
-   axios.post('http://localhost:5000/contact', data)
+   axios.post('http://localhost:8082/contact', data)
   .then(function (response) {
       console.log("SUCCESS");
       alert("Mail sent!");
